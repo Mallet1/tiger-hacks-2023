@@ -3,20 +3,11 @@
 import axios from 'axios'
 import qs from 'query-string'
 import * as z from 'zod'
+import App from '../fitness/profile/src/App'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog'
-import { Form, FormControl, FormField, FormItem } from '@/components/ui/form'
-import { Button } from '@/components/ui/button'
-import { FileUpload } from '@/components/file-upload'
+import { Dialog, DialogContent } from '@/components/ui/dialog'
 import { useRouter } from 'next/navigation'
 import { useModal } from '@/hooks/use-modal-store'
 
@@ -26,11 +17,11 @@ const formSchema = z.object({
     }),
 })
 
-export const MessageFileModal = () => {
+export const FitnessProfileModal = () => {
     const { isOpen, onClose, type, data } = useModal()
     const router = useRouter()
 
-    const isModalOpen = isOpen && type === 'messageFile'
+    const isModalOpen = isOpen && type === 'fitnessProfile'
     const { apiUrl, query } = data
 
     const form = useForm({
@@ -69,10 +60,10 @@ export const MessageFileModal = () => {
 
     return (
         <Dialog open={isModalOpen} onOpenChange={handleClose}>
-            <DialogContent className='bg-white text-black p-0 overflow-hidden'>
-                <DialogHeader className='pt-8 px-6'>
+            <DialogContent title='fitness'>
+                {/* <DialogHeader className='pt-8 px-6'>
                     <DialogTitle className='text-2xl text-center font-bold'>
-                        Add an attachment
+                        Test
                     </DialogTitle>
                     <DialogDescription className='text-center text-zinc-500'>
                         Send a file as a message
@@ -108,7 +99,8 @@ export const MessageFileModal = () => {
                             </Button>
                         </DialogFooter>
                     </form>
-                </Form>
+                </Form> */}
+                <App />
             </DialogContent>
         </Dialog>
     )

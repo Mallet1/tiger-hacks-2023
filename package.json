@@ -31,6 +31,9 @@
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "@uploadthing/react": "^5.3.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
     "autoprefixer": "10.4.15",
     "axios": "^1.4.0",
     "class-variance-authority": "^0.7.0",
@@ -56,11 +59,16 @@
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.6",
-    "typescript": "5.1.6",
     "uploadthing": "^5.3.3",
     "uuid": "^9.0.0",
     "zod": "^3.22.2",
-    "zustand": "^4.4.1"
+    "zustand": "^4.4.1",
+    "apexcharts": "^3.44.0",
+    "file-saver": "^2.0.5",
+    "react-apexcharts": "^1.4.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
   },
   "devDependencies": {
     "@types/uuid": "^9.0.2",
