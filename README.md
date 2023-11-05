@@ -79,6 +79,8 @@ npx prisma db push
 npm run dev
 ```
 
+## README for fitness tracker part of the app
+
 ## Available commands
 
 Running commands with npm `npm run [command]`
